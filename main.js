@@ -142,7 +142,7 @@ ipcMain.handle('get-weather', async () => {
   try {
     const fetch = (await import('node-fetch')).default;
 
-    const geoRes = await fetch('http://ip-api.com/json/');
+    const geoRes = await fetch('https://ip-api.com/json/');
     const geo = await geoRes.json();
 
     if (geo.status !== 'success') return null;
